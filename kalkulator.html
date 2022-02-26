@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function oblicz()
+        {
+            var punkty = parseFloat(document.getElementById("punkty").value);
+	        document.getElementById("zakres5").innerHTML = "Zakres punktów: " + (punkty * 0.90) + " - " + punkty;
+	        document.getElementById("zakres4").innerHTML = "Zakres punktów: " + (punkty * 0.70) + " - " + (punkty * 0.90);
+	        document.getElementById("zakres3").innerHTML = "Zakres punktów: " + (punkty * 0.50) + " - " + (punkty * 0.70);
+	        document.getElementById("zakres2").innerHTML = "Zakres punktów: " + (punkty * 0.20) + " - " + (punkty * 0.50);
+	        document.getElementById("zakres1").innerHTML = "Zakres punktów: " + 0 + " - " + (punkty * 0.20);
+        }
+    </script>
+</head>
+<body>
+<body bgcolor="#DB7093">
+    <p>Wpisz ilość punktów</p>
+    <input type="text" id="punkty">
+    <input type="button" value="Oblicz" onclick="oblicz()">
+    <p><strong>Bardzo dobry </p></strong>
+    <p id="zakres5">Zakres punktów: </p>
+    <p><strong>Dobry </p></strong>
+    <p id="zakres4">Zakres punktów: </p>
+    <p><strong>Dostateczny</p></strong>
+
+    <p id="zakres3">Zakres punktów: </p>
+    <p><strong>Dopuszczający</p></strong>
+    <p id="zakres2">Zakres punktów: </p>
+    <p><strong>Niedostateczny</p> </strong>
+    <p id="zakres1">Zakres punktów: </p>
+</body>
+</html>
